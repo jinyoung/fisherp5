@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+
+  generate-master:
+    tty: true
+    env_file:
+      - .env
+    image: ghcr.io/jinyoung/gpt-engineer:v2
+    volumes:
+      - ../master:/project
+  generate-purchase:
+    tty: true
+    env_file:
+      - .env
+    image: ghcr.io/jinyoung/gpt-engineer:v2
+    volumes:
+      - ../purchase:/project
